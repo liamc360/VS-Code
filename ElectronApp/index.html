@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title here</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Content/Site.css">
+</head>
+<body>
+
+    <div id="tableSideNav" class="sidenav">
+        <label class="h2 label-white navExtraTitle">Tables</label>
+        <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+        <a href="#" id="employeesHyperLink" class="side-nav-btn">Employees</a>
+        <a href="#" class="side-nav-btn">Services</a>
+        <a href="#" class="side-nav-btn">Clients</a>
+        <a href="#" class="side-nav-btn">Contact</a>
+
+    <div id="nav" class="nav"> 
+        <div class="icon">
+            <ul>
+                <li>
+                    <a href="#" id="homeHyperlink">
+                        <i class="fa fa-home"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:openTablesNav()" id="tableHyperlink"><i class="fa fa-table"></i></a>
+                </li>
+
+            </ul>
+
+            <ul class="nav-bottom">
+                    a
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript">$("[data-toggle=tooltip").tooltip();</script>
+    <script>
+        var open = false;
+        var extraNavWidth = "200px";
+        /* Set the width of the side navigation to 250px */
+        function openTablesNav() {
+            
+            if (open) {
+                document.getElementById("tableSideNav").style.width = "0";
+            }
+            else {
+                document.getElementById("tableSideNav").style.width = extraNavWidth;
+            } 
+            open = !open;
+        }
+
+        /* Set the width of the side navigation to 0 
+        function closeNav() {
+            document.getElementById("tableSideNav").style.width = "0";
+        }*/
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+</body>
+</html>
